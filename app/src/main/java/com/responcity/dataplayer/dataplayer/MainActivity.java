@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         try {
             int srate = Math.max(MIN_SAMPLE_RATE, AudioParameters.suggestSampleRate());
             pdService.initAudio(srate, 0, 2, -1);   // negative values will be replaced with defaults/preferences
-            pdService.startAudio(new Intent(this, MainActivity.class), R.drawable.icon, name, "Return to " + name + ".");
+            pdService.startAudio(new Intent(this, MainActivity.class), R.drawable.sunificon, name, "Return to " + name + ".");
             if (lastKnownLat != null && !lastKnownLat.isEmpty()) {
                 callSmhiServiceForPoint(lastKnownLon, lastKnownLat);
             }
